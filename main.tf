@@ -37,7 +37,7 @@ variable "ikswsname" {
 #}
 
 output "kube_config" {
-  value = local.kube_config
+  value = base64decode(local.kube_config)
 }
 
 locals {
